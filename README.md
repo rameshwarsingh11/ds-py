@@ -1,2 +1,3 @@
 # ds-py
-Statistic model of Data Science implementation in Python
+
+Statistical model of Data Science implementation in Python
