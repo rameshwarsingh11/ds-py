@@ -43,3 +43,40 @@ axes2.plot(y,x)
 axes2.set_title('Smaller Plot')
 axes1.set_title('Larger Plot')
 fig.show()
+
+fig,axes = plt.subplots(nrows=1,ncols=2)
+#axes.plot(x,y)
+plt.tight_layout()
+
+for current_ax in axes:
+  current_ax.plot(x,y)
+
+  axes[0].plot(x,y)
+  axes[0].set_title('Primary plot')
+  axes[1].plot(y,x)
+  axes[1].set_title('Secondary Plot')
+
+fig,axes = plt.subplots(nrows =2, ncols=1, figsize=(3,2), dpi=100)
+#ax = fig.add_axes([0,0,1,1])
+#ax.plot(x,y)
+
+axes[0].plot(x,y)
+
+axes[1].plot(y,x)
+
+plt.tight_layout()
+
+
+fig = plt.figure()
+
+ax = fig.add_axes([0,0,1,1])
+ax.plot(x,y, label= 'X Squared')
+
+#ax.set_title('Sample')
+#ax.set_ylabel('Y')
+#ax.set_xlabel('X')
+
+ax.plot(y,x, label= 'X Cubed')
+
+
+ax.legend(loc=(1))
