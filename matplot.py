@@ -80,3 +80,14 @@ ax.plot(y,x, label= 'X Cubed')
 
 
 ax.legend(loc=(1))
+
+#Few more operations listed below:
+fig.savefig('my_test_pic.png',dpi=200)
+
+fig = plt.figure()
+ax = fig.add_axes([0,0,1,1])
+ax.plot(x,y, color='green', lw=0.1, linestyle='--', marker='o', markersize=20
+        , markerfacecolor='yellow', markeredgewidth=3, markeredgecolor='green')
+#ax.plot(x,y,color='purple',lw=2,ls='--')
+ax.set_xlim([0,1])
+ax.set_ylim([0,2])
