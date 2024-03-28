@@ -35,3 +35,21 @@ sns.swarmplot(x='day',y='total_bill',data=tips)
 
 #Factorplot is replaced by catplot in Seaborn library.
 sns.catplot(x='day',y='total_bill',data=tips, kind='bar')
+
+#Matrix plot
+tips = sns.load_dataset('tips')
+flights = sns.load_dataset('flights')
+tips.head()
+flights.head()
+tc=tips.corr()
+sns.heatmap(tc, annot= True)
+
+fp =flights.pivot_table(index= 'month', columns = 'year', values= 'passengers')
+
+sns.heatmap(fp,cmap='magma',linecolor='white', linewidths=1)
+
+sns.clustermap(fp, cmap='coolwarm', standard_scale=1)
+
+
+heatmap_white
+
