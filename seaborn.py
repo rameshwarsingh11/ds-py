@@ -72,6 +72,19 @@ g.map(sns.distplot,'total_bill')
 
 g.map(plt.scatter, 'total_bill', 'tip')
 
+#Styles and mixing matplot with seaborn plots
+sns.set_style('ticks')
+sns.countplot(x='sex', data=tips)
+sns.despine(left = True, bottom= True)
+
+plt.figure(figsize=(12,3))
+sns.countplot(x='sex', data=tips)
+
+sns.set_context('poster')
+sns.countplot(x='sex', data=tips)
+
+sns.lmplot(x='total_bill', y = 'tip', data =tips, hue= 'sex', palette='seismic')
+
 
 
 
