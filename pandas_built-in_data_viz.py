@@ -46,3 +46,7 @@ df2['b'].plot.density()
 
 df2.plot.density()
 
+f = plt.figure()
+df3.loc[0:30].plot.area(alpha=0.4)
+plt.legend(loc='center left', bbox_to_anchor=(1.0,0.5))
+plt.show()
